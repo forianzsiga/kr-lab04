@@ -21,3 +21,12 @@ function App()
 
 
 render( <App />, document.getElementById( 'app' ) );
+
+if (typeof window !== 'undefined' && 'Notification' in window && Notification.requestPermission) {
+	// requestPermission returns a Promise in modern browsers
+	Notification.requestPermission().then(permission => {
+		console.log('Notification permission:', permission);
+	}).catch(err => {
+		console.warn('Notification.requestPermission failed', err);
+	});
+}

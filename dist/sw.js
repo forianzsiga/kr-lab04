@@ -37,3 +37,23 @@ async function impl(e) {
 }
 
 self.addEventListener('fetch', e => e.respondWith(impl(e)));
+
+self.addEventListener('push', function (e) {
+    // e.data lehet üres, ezért kezeljük try-catch blokkal
+    let body = '';
+    try {
+        body = e.data ? e.data.text() : '';
+    } catch (err) {
+        console.warn('Failed to read push event data', err);
+        body = '';
+    }
+
+    const title = 'Chat Notification';
+    const options = {
+        body: body || '(no message)',
+        icon: 'logo192.png',
+        badge: 'logo192.png'
+    };
+
+    e.waitUntil(self.registration.showNotification(title, options));
+});
