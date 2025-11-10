@@ -1,0 +1,22 @@
+.MessageCard {
+	.bubble {
+		background: #335; /* Sötét téma */
+		padding: 6px 10px; /* Design */
+		border-radius: 5px; /* Design */
+		box-shadow: 1px 1px 5px black; /* Árnyék */
+		grid-template-columns: auto auto; /* Két részre osztva vízszintesen */
+		gap: 8px; /* Két rész közötti hely */
+	}
+
+	&.own {
+		justify-self: end; /* Saját üzeneteket jobbra igazítjuk */
+
+		.bubble {
+			background: #533; /* Más színük van */
+		}
+	}
+
+	.time {
+		color: #aaa; /* Idő design */
+	}
+}

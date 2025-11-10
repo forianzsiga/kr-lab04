@@ -1,0 +1,16 @@
+.LeftPane {
+	grid-template-rows: auto auto 1fr; /* Függőlegesen három részre osztjuk, a felső két rész csak egy soros, az alsó a maradék helyet veszi fel */
+	border-right: 1px solid gray; /* Elválasztó keret a jobb oldalon */
+
+	&>p {
+		padding-inline: 8px; /* Bal-jobb hely*/
+		font-weight: bold; /* Vastag betű kiemelésre*/
+		text-align: end; /* jobb rendezett*/
+	}
+
+	.conversations {
+		overflow-y: auto; /* Függőleges scroll bar bekapcsolása*/
+		align-content: start; /* Felülre igazítás, összehúzás*/
+		grid-template-rows: auto; /* Az elemek függőleges méretének minimálisra (contentre) állítása*/
+	}
+}

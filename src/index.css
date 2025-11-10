@@ -1,0 +1,54 @@
+html {
+	font-family: 'Segoe UI', sans-serif; /*Font*/
+	font-size: 16px; /*Font mérete (16px=12pt)*/
+	line-height: 1.5; /*Sormagasság, 16px*1.5=24px, tipikus mostanában*/
+	background: #333336; /*Sötét téma sötét háttérrel*/
+	color: white; /*Sötét téma fehér betűkkel*/
+}
+
+html,
+body,
+div {
+	margin: 0; /* CSS reset */
+	padding: 0; /* CSS reset */
+	display: grid; /* grid-re állunk át mindenhol */
+	grid: minmax(0, 1fr) / minmax(0, 1fr); /* Az egyetlen gyerek szülő méretű */
+}
+
+body {
+	min-height: 100vh; /* ablak méretű */
+	max-height: 100vh; /* ablak méretű */
+}
+
+input,
+button,
+a {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	border: 0; /* ne legyen kerete a buttonnak és az inputnak */
+	color: inherit;
+}
+
+input {
+	background: black; /* Sötét téma */
+}
+
+button {
+	padding: 8px 16px; /* Tágas */
+	background: #2ae; /* Sötét téma */
+	font-weight: 600; /* Bold */
+	border-radius: 7px; /* Lekerekített */
+	box-shadow: 1px 2px 10px black; /* Árnyék */
+	transition: all 145ms ease-out; /* Átmenet az árnyékra és színre, ami változik */
+
+	&:hover {
+		background: #3cf; /* Megváltoztatja a színét, ha fölé visszük az egeret */
+		box-shadow: 2px 5px 20px black; /* Nagyobb árnyék, ha kiemelkedik */
+	}
+
+	&:active {
+		box-shadow: none; /* Lenyomva nincs árnyék */
+		background: #17b; /* Megváltoztatja a színét, ha aktiváljuk (lenyomjuk) */
+	}
+}

@@ -1,0 +1,7 @@
+.TextInputAndButton {
+	grid-template-columns: 1fr auto; /* Gyerekek elrendezése úgy, hogy TextInput kapja a maximális helyet, button pedig a lehető legkisebbet */
+	gap: 4px; /* legyen köztük némi távolság*/
+	background: black; /* Az egész háttér legyen fekete, mintha az egész a TextInput lenne*/
+	align-items: center; /* Függőlegesen középre igazítjuk a gyerekeket*/
+	padding-right: 4px; /* A gomb után hagyunk pici helyet, hogy ne érjen ki a szélére*/
+}

@@ -1,0 +1,20 @@
+.ConversationCard {
+	cursor: pointer; /* Klikkelhető design */
+	padding: 8px; /* Hely */
+
+	&.selected {
+		background: #17b; /* Kiválasztott szín, oldjuk meg var-ral, ha van téma támogatásunk */
+	}
+
+	div {
+		grid-template-columns: 1fr auto; /* Két oszlopos */
+		align-items: center; /* Függőlegesen középre igazított */
+		gap: 4px; /* Van az oszlopok között hely */
+
+		h3 {
+			font-weight: 500; /* A név vastag*/
+			font-size: 1rem; /* Felülírjuk az alapértelmezett h3 méretet */
+			margin: 0; /* Felülírjuk az alapértelmezett h3 margót */
+		}
+	}
+}
